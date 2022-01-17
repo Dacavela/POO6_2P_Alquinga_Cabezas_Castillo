@@ -2,8 +2,10 @@ com\mycompany\mavenproject1\modelo\Laboratorista.class
 com\mycompany\mavenproject1\App.class
 com\mycompany\mavenproject1\modelo\Paciente.class
 com\mycompany\mavenproject1\InicioVistaController.class
+com\mycompany\mavenproject1\modelo\RegistroException.class
 com\mycompany\mavenproject1\modelo\ManejoArchivos\Archivos.class
 com\mycompany\mavenproject1\RegistroVistaController.class
 com\mycompany\mavenproject1\modelo\Usuario.class
 com\mycompany\mavenproject1\modelo\Cita.class
+com\mycompany\mavenproject1\modelo\Validaciones.class
 module-info.class

@@ -53,13 +53,16 @@ public class InicioVistaController implements Initializable {
 
     @FXML
     private void iniciarSesion(ActionEvent event) {
-        
+        System.out.println("iniciando sesion");
     }
 
     @FXML
     private void crearNuevaCuenta(MouseEvent event) {
     try{
-        App.setRoot("registroVista");}catch(Exception e){}
+        
+        App.setRoot("registroVista");
+        
+    }catch(Exception e){}
     }
     
     
