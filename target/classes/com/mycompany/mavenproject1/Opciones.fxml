@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #082557;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject1.OpcionesController">
+   <children>
+      <Text fill="#f5f5f5" layoutX="71.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDO ">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Button fx:id="ConocerUbicBtn" layoutX="196.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#ConocerUbicaciones" prefHeight="33.0" prefWidth="201.0" style="-fx-background-color: #2C74EE;" text="Conoce nuestras ubicaciones" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="PruebaDomBtn" layoutX="198.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#SolicitarPruebaDomicilio" prefHeight="36.0" prefWidth="201.0" style="-fx-background-color: #2C74EE;" text="Solicitar pruebas a domicilio" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Text fx:id="NamePaText" fill="WHITE" layoutX="248.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
