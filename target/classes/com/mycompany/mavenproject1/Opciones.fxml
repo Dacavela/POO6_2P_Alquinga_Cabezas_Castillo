@@ -17,7 +17,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="PruebaDomBtn" layoutX="198.0" layoutY="277.0" mnemonicParsing="false" onAction="#SolicitarPruebaDomicilio" onMouseClicked="#SolicitarPruebaDomicilio" prefHeight="36.0" prefWidth="201.0" style="-fx-background-color: #2C74EE;" text="Solicitar pruebas a domicilio" textFill="WHITE">
+      <Button fx:id="PruebaDomBtn" layoutX="198.0" layoutY="277.0" mnemonicParsing="false" onAction="#SolicitarPruebaDomicilio" prefHeight="36.0" prefWidth="201.0" style="-fx-background-color: #2C74EE;" text="Solicitar pruebas a domicilio" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

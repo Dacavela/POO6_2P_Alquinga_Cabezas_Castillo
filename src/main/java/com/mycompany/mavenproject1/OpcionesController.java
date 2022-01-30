@@ -58,12 +58,10 @@ public class OpcionesController implements Initializable {
         try {
             App.setRoot("AgendarPrueba");
         } catch (IOException ex) {
-            ex.printStackTrace();
+            System.out.println("Imposible abrir ventana");
         }
     }
 
-    @FXML
-    private void SolicitarPruebaDomicilio(MouseEvent event) {
-    }
+ 
     
 }
