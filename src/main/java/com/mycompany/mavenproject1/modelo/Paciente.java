@@ -5,13 +5,14 @@
  */
 package com.mycompany.mavenproject1.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author DhuDu
  */
-public class Paciente extends Usuario {
+public class Paciente extends Usuario{
     private String id;
     private String nombres;
     private String apellidos;
@@ -21,8 +22,19 @@ public class Paciente extends Usuario {
     private String email;
     private String telefono;
 
-    public Paciente(String id, String nombres, String apellidos, String fNacim, String genero, String ciudad, String email, String telefono, String usuario, String password, String tipo) {
+    public Paciente(String usuario, String password, String tipo,String id, String nombres, String apellidos, String fNacim, String genero, String ciudad, String email, String telefono) {
         super(usuario, password, tipo);
+        this.id = id;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.fNacim = fNacim;
+        this.genero = genero;
+        this.ciudad = ciudad;
+        this.email = email;
+        this.telefono = telefono;
+    }
+    public Paciente(String usuario,String id, String nombres, String apellidos, String fNacim, String genero, String ciudad, String email, String telefono) {
+        super(usuario);
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;

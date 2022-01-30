@@ -15,7 +15,7 @@ public class App extends Application {
 
     private static Scene scene;
     public int ancho = 640;
-
+    public static String pathFile="src/main/resources/files/";
     
     
     
@@ -32,12 +32,20 @@ public class App extends Application {
         scene.setRoot(loadFXML(fxml));
         
     }
+    public static void setRoot(FXMLLoader fxmlloader) throws IOException{
+        scene.setRoot(fxmlloader.load());
+    }
 
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
+    public static FXMLLoader loadFXMLLoader(String fxml) throws IOException{
+        FXMLLoader fxmloader=new FXMLLoader(App.class.getResource(fxml+ ".fxml"));
+        return fxmloader;
+    
+    }
     public static void main(String[] args) {
         launch();
     }

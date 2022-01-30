@@ -5,9 +5,11 @@
  */
 package com.mycompany.mavenproject1;
 
+import com.mycompany.mavenproject1.modelo.ManejoArchivos.Archivos;
 import com.mycompany.mavenproject1.modelo.Paciente;
 import com.mycompany.mavenproject1.modelo.RegistroException;
 import static com.mycompany.mavenproject1.modelo.Validaciones.*;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -93,23 +95,30 @@ public class RegistroVistaController implements Initializable {
             throw new RegistroException("Los campos no deben estar vacios");
             
         }else{
-            Paciente p1 = new Paciente(validarCedula(txtCedula),
+            Paciente p1 = new Paciente(validNameUser(txtUsuarioReg),
+            validPassword(txtContraReg),
+            "P",validarCedula(txtCedula),
             validarNames(txtNombres),
             validarNames(txtApellidos),
             txtFnac.getValue().toString(),
             gender,
             validarNames(tctCiudad),
             validarEmail(txtEmail),
-            validarCelular(txtTelefono),
-            validNameUser(txtUsuarioReg),
-            validPassword(txtContraReg),
-            "P");
+            validarCelular(txtTelefono));
+            
+            Archivos.escribirPaciente(p1);
+            Archivos.escribirUsuario(p1);
+            Alert a =new Alert(AlertType.CONFIRMATION,"Datos guardados exitosamente");
+            a.show();
+            App.setRoot("inicioVista");
             }}catch(RegistroException e){
                 Alert alerta = new Alert(AlertType.ERROR);
                 alerta.setHeaderText(null);
                 alerta.setContentText(e.getMessage());
                 alerta.showAndWait();
-            }
+            } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     
     }
         

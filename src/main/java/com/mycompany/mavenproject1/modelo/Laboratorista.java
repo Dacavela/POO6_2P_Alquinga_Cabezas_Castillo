@@ -5,6 +5,8 @@
  */
 package com.mycompany.mavenproject1.modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author DhuDu

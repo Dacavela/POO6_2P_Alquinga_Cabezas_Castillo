@@ -5,6 +5,7 @@
  */
 package com.mycompany.mavenproject1;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -26,21 +27,34 @@ public class OpcionesController implements Initializable {
     private Button PruebaDomBtn;
     @FXML
     private Text NamePaText;
+    @FXML
+    private Text idBienvenido;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }    
 
+    public void setLabel(String usuario){
+        idBienvenido.setText(usuario);
+    }
+    
     @FXML
     private void ConocerUbicaciones(MouseEvent event) {
+        
     }
 
     @FXML
     private void SolicitarPruebaDomicilio(MouseEvent event) {
+        try {
+            App.setRoot("AgendarPrueba");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        
     }
     
 }

@@ -5,6 +5,8 @@
  */
 package com.mycompany.mavenproject1.modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author DhuDu
@@ -19,6 +21,10 @@ public class Usuario {
         this.password = password;
         this.tipo = tipo;
     }
+    public Usuario(String usuario){
+        this.usuario=usuario;
+    }
+    
     public Usuario(){}
 
     public String getUsuario() {
@@ -44,6 +50,8 @@ public class Usuario {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+    
+    
    
     
 }

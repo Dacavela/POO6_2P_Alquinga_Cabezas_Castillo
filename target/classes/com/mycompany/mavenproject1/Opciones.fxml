@@ -7,7 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #082557;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject1.OpcionesController">
    <children>
-      <Text fill="#f5f5f5" layoutX="71.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDO ">
+      <Text fx:id="idBienvenido" fill="#f5f5f5" layoutX="71.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDO ">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>

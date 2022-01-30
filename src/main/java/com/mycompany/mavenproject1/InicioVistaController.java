@@ -6,10 +6,16 @@
 package com.mycompany.mavenproject1;
 
 //import static com.mycompany.mavenproject1.App.setRoot;
+import com.mycompany.mavenproject1.modelo.ManejoArchivos.Archivos;
+import com.mycompany.mavenproject1.modelo.Paciente;
+import com.mycompany.mavenproject1.modelo.Usuario;
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -24,7 +30,9 @@ import javafx.scene.input.MouseEvent;
  * @author DhuDu
  */
 public class InicioVistaController implements Initializable {
-
+    private ArrayList<Usuario> lista;
+    private ArrayList<Paciente> listaPaciente;
+    
     @FXML
     private ImageView imgLogo;
     @FXML
@@ -43,7 +51,9 @@ public class InicioVistaController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        lista=Archivos.leerUsuario();
+        listaPaciente=Archivos.leerPaciente();
+        
     }    
 
     @FXML
@@ -53,7 +63,32 @@ public class InicioVistaController implements Initializable {
 
     @FXML
     private void iniciarSesion(ActionEvent event) {
-        System.out.println("iniciando sesion");
+        String usuario=txtUser.getText();
+        String contrasena=txtPassword.getText();
+        try{
+        for(Usuario u:lista){
+            if(u.getUsuario().equals(usuario) && u.getPassword().equals(contrasena)){
+                String tipo=u.getTipo();                
+                if(tipo.equals("P")){
+                    boolean genero=Archivos.leerGenero(u);
+                    
+                    FXMLLoader fxmlloader=App.loadFXMLLoader("Opciones");
+                    App.setRoot(fxmlloader);
+                    OpcionesController oc=fxmlloader.getController();
+                    if(genero==true){
+                        oc.setLabel("BIENVENIDA "+usuario);
+                    }
+                    else
+                        oc.setLabel("BIENVENIDO "+ usuario);
+                    
+                }else{
+                    App.setRoot("OpcionesLaboratorista");
+                }
+            }
+        }
+        }catch(IOException ex){
+            System.out.println("No se encontro el root");
+        }
     }
 
     @FXML
