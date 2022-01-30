@@ -8,6 +8,7 @@ package com.mycompany.mavenproject1;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -42,19 +43,27 @@ public class OpcionesController implements Initializable {
         idBienvenido.setText(usuario);
     }
     
+
     @FXML
-    private void ConocerUbicaciones(MouseEvent event) {
-        
+    private void ConocerUbicaciones(ActionEvent event) {
+        try {
+            App.setRoot("Ubicaciones");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     @FXML
-    private void SolicitarPruebaDomicilio(MouseEvent event) {
+    private void SolicitarPruebaDomicilio(ActionEvent event) {
         try {
             App.setRoot("AgendarPrueba");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        
+    }
+
+    @FXML
+    private void SolicitarPruebaDomicilio(MouseEvent event) {
     }
     
 }

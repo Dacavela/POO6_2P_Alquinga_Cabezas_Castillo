@@ -16,7 +16,7 @@ public class App extends Application {
     private static Scene scene;
     public int ancho = 640;
     public static String pathFile="src/main/resources/files/";
-    
+    public static String pathImage="src/main/resources/images/";
     
     
     

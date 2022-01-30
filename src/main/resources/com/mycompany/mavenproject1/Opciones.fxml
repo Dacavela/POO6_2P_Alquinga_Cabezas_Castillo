@@ -12,12 +12,12 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Button fx:id="ConocerUbicBtn" layoutX="196.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#ConocerUbicaciones" prefHeight="33.0" prefWidth="201.0" style="-fx-background-color: #2C74EE;" text="Conoce nuestras ubicaciones" textFill="WHITE">
+      <Button fx:id="ConocerUbicBtn" layoutX="196.0" layoutY="175.0" mnemonicParsing="false" onAction="#ConocerUbicaciones" prefHeight="33.0" prefWidth="201.0" style="-fx-background-color: #2C74EE;" text="Conoce nuestras ubicaciones" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="PruebaDomBtn" layoutX="198.0" layoutY="277.0" mnemonicParsing="false" onMouseClicked="#SolicitarPruebaDomicilio" prefHeight="36.0" prefWidth="201.0" style="-fx-background-color: #2C74EE;" text="Solicitar pruebas a domicilio" textFill="WHITE">
+      <Button fx:id="PruebaDomBtn" layoutX="198.0" layoutY="277.0" mnemonicParsing="false" onAction="#SolicitarPruebaDomicilio" onMouseClicked="#SolicitarPruebaDomicilio" prefHeight="36.0" prefWidth="201.0" style="-fx-background-color: #2C74EE;" text="Solicitar pruebas a domicilio" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
