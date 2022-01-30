@@ -7,7 +7,6 @@ package com.mycompany.mavenproject1;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -31,22 +30,14 @@ public class UbicacionesController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try(FileInputStream file=new FileInputStream(App.pathImage+"mapa.png")) {
-            Image i=new Image(file,700,700,true,true);
-            ImageView imv=new ImageView(i);
+        try{
+            FileInputStream file=new FileInputStream(App.pathImage+"mapa.png");
+            ImageView imv=new ImageView(new Image(file));
             root.getChildren().add(imv);
+            
         } catch (FileNotFoundException ex) {
-            ex.getMessage();
-        } catch (IOException ex) {
             ex.printStackTrace();
         }
-        
-        
-    }
-    
-    
-
-
-    
+    }    
     
 }
