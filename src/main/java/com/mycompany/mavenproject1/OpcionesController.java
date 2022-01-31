@@ -61,6 +61,8 @@ public class OpcionesController implements Initializable {
             System.out.println("Imposible abrir ventana");
         }
     }
+    
+    
 
  
     

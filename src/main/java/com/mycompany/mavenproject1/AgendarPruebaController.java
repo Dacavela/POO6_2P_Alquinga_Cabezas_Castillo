@@ -43,6 +43,8 @@ public class AgendarPruebaController implements Initializable {
 
     @FXML
     private void ActionAgregar(ActionEvent event) {
+        
+        
     }
     
 }

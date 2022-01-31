@@ -1,0 +1,4 @@
+Vithas Alborada,Calle Crotos y Av. Rodolfo Baquerizo,10:00,325,325
+Vithas Prosperina, Calle 4ta y Av.6ta,11:00,125,450
+Vithas El Ceibol,Calle 19,3:00,480,630
+

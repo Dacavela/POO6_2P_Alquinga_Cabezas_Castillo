@@ -6,6 +6,7 @@
 package com.mycompany.mavenproject1.modelo.ManejoArchivos;
 
 import com.mycompany.mavenproject1.App;
+import com.mycompany.mavenproject1.modelo.Local;
 import com.mycompany.mavenproject1.modelo.Paciente;
 import com.mycompany.mavenproject1.modelo.Usuario;
 import java.io.BufferedReader;
@@ -96,6 +97,24 @@ public class Archivos {
         }
         return genero;
     }    
+    
+    public static ArrayList<Local> leerLocales(){
+        ArrayList<Local> ListLocal=new ArrayList<>();
+        try(BufferedReader bf=new BufferedReader(new FileReader(App.pathFile+"locales.txt"))){
+            String linea;
+            while((linea=bf.readLine())!=null){
+                String[] datos=linea.split(",");
+                ListLocal.add(new Local(datos[0],datos[1],datos[2],Double.parseDouble(datos[3]),Double.parseDouble(datos[4])));                
+            }            
+        } catch (FileNotFoundException ex) {
+            System.out.println("Clase no encontrada");
+        } catch (IOException ex) {
+            System.out.println("No se pudo leer el archivo");
+        }
+        return ListLocal;
+    
+    
+    }
     
     
 }
