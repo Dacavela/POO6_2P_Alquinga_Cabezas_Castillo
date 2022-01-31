@@ -2,27 +2,38 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #3f6fcd;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject1.PopUpUbicacionController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1325.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject1.PopUpUbicacionController">
    <children>
-      <Label fx:id="idDireccion" textFill="WHITE" />
-      <Label fx:id="idCalleEspecifica" />
-      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="300.0" spacing="10.0">
+      <AnchorPane fx:id="paneContenedor" onMouseClicked="#pinMapa" prefHeight="597.0" prefWidth="1325.0" />
+      <HBox alignment="CENTER" prefHeight="47.0" prefWidth="700.0" spacing="30.0">
          <children>
-            <Label text="Mostrando   " textFill="WHITE" />
-            <Label fx:id="idSegundos" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #303ef8;" text="Cerrar" textFill="WHITE">
-               <HBox.margin>
-                  <Insets left="70.0" />
-               </HBox.margin>
-            </Button>
+            <Label prefHeight="20.0" prefWidth="65.0" text="Dirección:" />
+            <TextField fx:id="txtDireccion" prefHeight="30.0" prefWidth="214.0" />
          </children>
       </HBox>
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="700.0" spacing="30.0">
+         <children>
+            <Label text="Fecha:       " />
+            <DatePicker prefHeight="30.0" prefWidth="214.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="700.0" spacing="30.0">
+         <children>
+            <Label text="Hora:         " />
+            <TextField prefHeight="30.0" prefWidth="214.0" />
+         </children>
+      </HBox>
+      <Button fx:id="btnFinalizar" alignment="CENTER" mnemonicParsing="false" onAction="#finalizar" text="Finalizar">
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </Button>
    </children>
-   <padding>
-      <Insets left="10.0" />
-   </padding>
 </VBox>

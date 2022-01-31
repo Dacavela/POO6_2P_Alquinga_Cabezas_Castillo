@@ -5,38 +5,41 @@
  */
 package com.mycompany.mavenproject1;
 
-
 import com.mycompany.mavenproject1.modelo.CamposIncompletosException;
 import com.mycompany.mavenproject1.modelo.Cita;
 import com.mycompany.mavenproject1.modelo.Prueba;
 import static com.mycompany.mavenproject1.modelo.Prueba.obtenerPrueba;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
  *
- * @author USER
+ * @author Davca
  */
 public class AgendarPruebaController implements Initializable {
-        Double subtotal = 0.00;
+
+    /**
+     * Initializes the controller class.
+     */
+    Double subtotal = 0.00;
         Double dom = 5.00;
         Double to = 0.00;
         ArrayList<Cita> guardarServicio = new ArrayList<>();
@@ -51,6 +54,7 @@ public class AgendarPruebaController implements Initializable {
     @FXML
     private VBox root;
 
+        @FXML
     private Label precioTipo;
     @FXML
     private VBox fPane;
@@ -179,5 +183,6 @@ public class AgendarPruebaController implements Initializable {
             Alert a = new Alert(Alert.AlertType.WARNING, "No ha elegido Servicio");
             a.showAndWait();
         }
-    } 
     }    
+    
+}

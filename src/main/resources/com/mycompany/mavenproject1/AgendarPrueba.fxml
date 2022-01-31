@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+
 <VBox fx:id="root" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject1.AgendarPruebaController">
    <children>
       <Label text="Agende su cita" textFill="#367eab">
@@ -22,7 +23,7 @@
             <ComboBox fx:id="cmbTipo" prefWidth="150.0" />
             <Label text="Prueba: ">
                <HBox.margin>
-                  <Insets />
+                  <Insets/>
                </HBox.margin>
                <padding>
                   <Insets left="15.0" />
@@ -59,6 +60,7 @@
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
+
       </HBox>
       <HBox alignment="BOTTOM_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="63.0" prefWidth="542.0">
          <children>

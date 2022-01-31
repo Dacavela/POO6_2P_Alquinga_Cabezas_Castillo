@@ -8,7 +8,6 @@ package com.mycompany.mavenproject1;
 //import static com.mycompany.mavenproject1.App.setRoot;
 import com.mycompany.mavenproject1.modelo.ManejoArchivos.Archivos;
 import com.mycompany.mavenproject1.modelo.Paciente;
-import com.mycompany.mavenproject1.modelo.RegistroException;
 import com.mycompany.mavenproject1.modelo.Usuario;
 import java.io.IOException;
 import java.net.URL;
@@ -18,8 +17,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -87,16 +84,10 @@ public class InicioVistaController implements Initializable {
                 }else{
                     App.setRoot("OpcionesLaboratorista");
                 }
-            }else{
-                throw new RegistroException("Datos invalidos");
             }
-                
         }
         }catch(IOException ex){
             System.out.println("No se encontro el root");
-        } catch (RegistroException ex) {
-            Alert a=new Alert(AlertType.ERROR,"Usuario o contraseña invalidos");
-            a.show();
         }
     }
 

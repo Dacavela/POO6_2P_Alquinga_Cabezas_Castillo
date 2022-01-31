@@ -1,3 +1,5 @@
+DIAG345,Diagnostico,RT-PCR,42.00
+DIAG422,Diagnostico,Antigeno,28.00
 DIAG345,Diagnóstico,RT-PCR,42.00
 DIAG422,Diagnóstico,Antígeno,28.00
 ANTI635,Anticuerpos,Cuantitativa,40.00
