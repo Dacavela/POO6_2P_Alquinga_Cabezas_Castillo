@@ -8,9 +8,11 @@ package com.mycompany.mavenproject1.modelo.ManejoArchivos;
 import com.mycompany.mavenproject1.App;
 import com.mycompany.mavenproject1.modelo.Local;
 import com.mycompany.mavenproject1.modelo.Paciente;
+import com.mycompany.mavenproject1.modelo.Prueba;
 import com.mycompany.mavenproject1.modelo.Usuario;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -114,6 +116,39 @@ public class Archivos {
         return ListLocal;
     
     
+    }
+    
+     public static ArrayList<Prueba> leerPrueba(){
+        ArrayList<Prueba> ListUsu=new ArrayList<>();
+        try(BufferedReader bf=new BufferedReader(new FileReader(new File(App.pathFile+"pruebas.txt")))){
+            String linea;
+            
+            while((linea=bf.readLine())!=null){
+                String[] datos=linea.split(",");
+                
+                ListUsu.add(new Prueba(datos[0],datos[1],datos[2], Double.parseDouble(datos[3])));                
+            }            
+        } catch (FileNotFoundException ex) {
+            System.out.println("Clase no encontrada");
+        } catch (IOException ex) {
+            System.out.println("No se pudo leer el archivo");
+        }
+        return ListUsu;
+    }
+    public static ArrayList<String> leerUbi(){
+        ArrayList<String> ListUsu=new ArrayList<>();
+        try(BufferedReader bf=new BufferedReader(new FileReader(new File(App.pathFile+"sucursales.txt")))){
+            String linea;
+            
+            while((linea=bf.readLine())!=null){
+                ListUsu.add(linea);                
+            }            
+        } catch (FileNotFoundException ex) {
+            System.out.println("Clase no encontrada");
+        } catch (IOException ex) {
+            System.out.println("No se pudo leer el archivo");
+        }
+        return ListUsu;
     }
     
     

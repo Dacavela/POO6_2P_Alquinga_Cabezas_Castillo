@@ -34,11 +34,15 @@
       <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="542.0" spacing="10.0">
          <children>
             <Label text="Valor unitario:" />
+            <Label fx:id="precioTipo" text="42.00" />
             <Label text="42.00" />
          </children>
          <padding>
             <Insets left="15.0" />
          </padding>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="542.0" spacing="10.0">
          <children>
@@ -46,9 +50,15 @@
                <padding>
                   <Insets left="38.0" />
                </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
             </Label>
             <TextField fx:id="TextFCantidad" />
          </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
       </HBox>
       <HBox alignment="BOTTOM_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="63.0" prefWidth="542.0">
          <children>
@@ -89,5 +99,12 @@
             </Label>
          </children>
       </HBox>
+      <VBox fx:id="fPane" prefHeight="200.0" prefWidth="100.0" />
+      <HBox fx:id="hBinferior" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+      <Button fx:id="btnContinuar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#continuar" style="-fx-background-color: #367eab;" text="Continuar" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="8.0" left="450.0" />
+         </VBox.margin>
+      </Button>
    </children>
 </VBox>
